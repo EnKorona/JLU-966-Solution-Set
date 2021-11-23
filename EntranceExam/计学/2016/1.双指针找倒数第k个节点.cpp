@@ -4,14 +4,14 @@
  * 3. 如果走到k步，快指针所指节点不为null，则快慢指针同速前进，知道快指针所指节点为null，此时慢指针所指节点即为倒数第k个节点
  */
 
-ListNode findKthFromEnd(ListNode list, int k) {
-    ListNode fast = list->link, slow = list->link;
-    while (fast != NULL && k > 0) {
+ListNode findKthFromEnd(ListNode *list, int k) {
+    ListNode *fast = list->link, *slow = list->link;
+    while (fast != nullptr && k > 0) {
         fast = fast->link;
         k--;
     }
     if (k != 0) return 0;    // 如果快指针已经到了链表尾，k未归零，则链表长度不足k，返回0
-    while (fast != NULL) {
+    while (fast != nullptr) {
         fast = fast->link;
         slow = slow->link;
     }

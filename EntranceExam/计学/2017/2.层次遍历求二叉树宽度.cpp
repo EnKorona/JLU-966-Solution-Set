@@ -6,7 +6,7 @@
  */
 
 int width(TreeNode *root) {
-    if (root == NULL) return 0;
+    if (root == nullptr) return 0;
     int maxWidth = -1;
     queue < TreeNode * > q;
     q.push(root);
@@ -16,10 +16,10 @@ int width(TreeNode *root) {
         for (int i = 0; i < curWidth; i++) {
             TreeNode *cur = q.front();
             q.pop();
-            if (cur->left != NULL) {
+            if (cur->left != nullptr) {
                 q.push(cur->left);
             }
-            if (cur->right != NULL) {
+            if (cur->right != nullptr) {
                 q.push(cur->right);
             }
         }
