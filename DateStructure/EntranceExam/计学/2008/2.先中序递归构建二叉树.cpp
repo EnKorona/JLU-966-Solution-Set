@@ -25,5 +25,5 @@ TreeNode *baseBuild(vector<int> &preorder, vector<int> &inorder, int preleft, in
     root->val = preorder[preleft];
     root->left = baseBuild(preorder, inorder, preleft + 1, preleft + leftLen, inleft, inRootIdx - 1);
     root->right = baseBuild(preorder, inorder, preleft + leftLen + 1, preright, inRootIdx + 1, inright);
-    root;
+    return root;
 }
