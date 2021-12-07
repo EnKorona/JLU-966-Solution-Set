@@ -15,6 +15,5 @@ ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         prev = prev->next;
     }
     prev->next = l1 == nullptr ? l2 : l1;
-    reurn
-    preHead->next;
+    return preHead->next;
 }
