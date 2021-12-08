@@ -4,7 +4,7 @@
  * 3. 如果走到k步，快指针所指节点不为null，则快慢指针同速前进，知道快指针所指节点为null，此时慢指针所指节点即为倒数第k个节点
  */
 
-ListNode findKthFromEnd(ListNode *list, int k) {
+ListNode* findKthFromEnd(ListNode *list, int k) {
     ListNode *fast = list->link, *slow = list->link;
     while (fast != nullptr && k > 0) {
         fast = fast->link;

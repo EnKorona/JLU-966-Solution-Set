@@ -13,6 +13,7 @@ TreeNode *deleteNode(TreeNode *root, int key) {
     if (root->val < key) {
         root->right = deleteNode(root->right, key);
     }
+    return root;
 }
 
 TreeNode *getMin(TreeNode *node) {
