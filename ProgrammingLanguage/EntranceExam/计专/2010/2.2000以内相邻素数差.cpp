@@ -20,7 +20,7 @@ void func() {
             prime[n++] = i;
         }
     }
-    for (int i = 0; i < k - 1; i++) {
+    for (int i = 0; i < n - 1; i++) {
         ans[i] = prime[i + 1] - prime[i];
         printf("%d ", ans[i]);
     }
