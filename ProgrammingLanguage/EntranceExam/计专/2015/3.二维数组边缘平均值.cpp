@@ -15,8 +15,8 @@ int main() {
     for (int i = 0; i < 20; i++) {
         sum += a[i][0] + a[i][9];
     }
-    for (int i = i; i < 9; i++) {
-        sum += a[0][j] + a[19][j];
+    for (int i = 1; i < 9; i++) {
+        sum += a[0][i] + a[19][i];
     }
     printf("%lf", sum / 56);
 }
