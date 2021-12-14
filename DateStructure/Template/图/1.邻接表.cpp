@@ -13,6 +13,6 @@ struct VNode { // 顶点表节点
 }
 
 struct Graph {
-    VNode vexList[]; // 图中顶点的数组
+    VNode adjList[]; // 图中顶点的数组
     int vexnum, arcnum; // 图中的顶点数和弧数
 }
