@@ -8,7 +8,7 @@ bool judge(string str, double x) {
     double ans = 0.0;
     int point = 0;
     for (int i = 0; i < str.length(); i++) {
-        if ((!(str[i] >= '0' && str[i] <= '9') || str[i] = '.')) {
+        if ((!(str[i] >= '0' && str[i] <= '9') || str[i] != '.')) {
             return false;
         } else if (str[i] >= '0' && str[i] <= '9') {
             ans = ans * 10 + str[i] - '0';

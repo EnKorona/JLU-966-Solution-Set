@@ -6,7 +6,7 @@ int getOdd(int S) {
     while (S != 0) {
         int last = S % 10;
         if (last % 2 == 1) {
-            ans += ans * base;
+            ans += base * last;
             base *= 10;
         }
         S /= 10;

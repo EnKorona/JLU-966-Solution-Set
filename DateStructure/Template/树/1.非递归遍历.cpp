@@ -62,3 +62,27 @@ vector<int> postorderTraversal(TreeNode *root) {
     reverse(res.begin(), res.end());
     return res;
 }
+
+vector <vector<int>> levelOrder(TreeNode *root) {
+    vector <vector<int>> res;
+    if (root == NULL) return res;
+    queue < TreeNode * > q;
+    q.push(root);
+    while (!q.empty()) {
+        int curLevelSize = q.size();
+        vector<int> curLevel;
+        for (int i = 0; i < curLevelSize; i++) {
+            TreeNode *cur = q.front();
+            curLevel.push_back(cur->val);
+            q.pop();
+            if (cur->left != NULL) {
+                q.push(cur->left);
+            }
+            if (cur->right != NULL) {
+                q.push(cur->right);
+            }
+        }
+        res.push_back(curLevel);
+    }
+    return res;
+}
