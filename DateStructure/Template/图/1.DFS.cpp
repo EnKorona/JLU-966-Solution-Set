@@ -16,3 +16,16 @@ struct Graph {
     VNode adjlist[]; // 图中顶点的数组
     int vexnum, arcnum; // 图中的顶点数和弧数
 }
+
+int visit[MAXN];
+
+void dfs(Graph g, int v) {
+    visit[v] = 1;
+    ArcNode *p = g.adjlist[v].firstArc;
+    while (p != nullptr) {
+        if (!visit[p->adjvex]) {
+            dfs(g, p->adjvex, visit);
+        }
+        p = p->next;
+    }
+}

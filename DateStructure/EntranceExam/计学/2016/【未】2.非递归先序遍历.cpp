@@ -39,7 +39,7 @@ struct TreeNode* create(int S[], int n) {
         }
         else {
             p = stack[top--];
-            p = p -> right；
+            p = p -> right;
         }
     }
     return root;
