@@ -18,7 +18,7 @@ void count(Graph p) {
     for (int i = 1; i <= g.vexnum; i++) {
         ArcNode *p = g.AdjList[i].firstArc;
         while (p != nullptr) {
-            res[p->adjVex]++; // p指向的节点的入度+1
+            indegree[p->adjVex]++; // p指向的节点的入度+1
             p = p->nextArc;
         }
     }
