@@ -11,26 +11,20 @@ struct Student{
     struct Student* next;
 };
 
-struct Student* create() {
-    Student* head,*p;
-    head = (struct Student*) malloc (sizeof (struct Student));
-
-}
-
 int output(struct Student* head) {
     FILE* fp;
-    if((fp = fopen("student.txt","w")) == nullptr) {
+    if((fp = fopen("student.txt","w")) == nullptr) {    // 注意此处是 w
         printf("Open File Error!");
         return -1;
     }
     struct Student* p = head;
     while(p != nullptr) {
-        fprintf(fp,"%d ",p -> number);
+        fprintf(fp,"%d ",p -> number);  // 注意
         fprintf(fp,"%s ",p -> name);
         fprintf(fp,"%d ",p -> score);
         fprintf(fp,"%d\n",p -> gender);
         p = p -> next;
     }
-    fclose(fp);
+    fclose(fp); // 记得关闭文件
     return 0;
 }
