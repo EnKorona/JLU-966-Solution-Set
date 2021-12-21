@@ -9,7 +9,7 @@ int main() {
     int row, column;
     for (int i = 0; i < 10; i++) {
         row = i, column = 0;
-        while (column >= 0) {
+        while (row >= 0) {
             a[row--][column++] = num++;
         }
     }

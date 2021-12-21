@@ -5,7 +5,7 @@ TreeNode *deleteNode(TreeNode *root, int key) {
         if (root->right == nullptr) return root->left;
         TreeNode *rightMin = getMin(root->right);
         root->val = rightMin->val;
-        root->right = deleteNode(root->right, key);
+        root->right = deleteNode(root->right, rightMin -> val);
     }
     if (root->val > key) {
         root->left = deleteNode(root->left, key);
