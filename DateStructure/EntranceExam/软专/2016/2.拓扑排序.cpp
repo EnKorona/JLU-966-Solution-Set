@@ -34,3 +34,5 @@ bool Topo(Graph g) {
             if (count < g.vexnum) return false;  //拓扑排序失败，有向图中有回路
             else return true;  //拓扑排序成功
         }
+    }
+}
